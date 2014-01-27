@@ -1,5 +1,10 @@
 {
-  "vars": {},
+  "vars": {
+    "@screen-xs-min": "480px",
+    "@screen-sm-min": "768px",
+    "@screen-md-min": "992px",
+    "@screen-lg-min": "1200px"
+},
   "css": [
     "print.less",
     "type.less",

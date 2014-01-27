@@ -1,45 +1,72 @@
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
+@media (min-width: @screen-sm-min) {
+
+}
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
+@media (min-width: @screen-md-min) {
+
+}
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
+@media (min-width: @screen-lg-min) {
+
+}
 
 /*  DEFAULTS */
 
 #main{
-	background: #eee;
+	background: #FAFAFA;
+	margin-top: 50px;
 }
 
-ul{
+ul, li{
 	list-style: none;
+}
+
+.navbar-default {
+	background-color: rgba(255,255,255,0.9);
+	border-color: #FFF;
 }
 
 /* SECTION: Artists */
 
-#artists { margin: 0 auto; overflow: hidden; height: 100%; }
+#artists { 
+	margin: 0 auto; 
+	overflow: hidden; 
+	height: 300px; 
+}
 
-.info-col { float: left; width: 132px; height: 100%; padding: 50px 0 0 0; }
+.info-col { float: left; width: 132px; height: 100%; padding: 0; }
 .info-col h2 { text-align: center; font-weight: normal; padding: 25px 0; }
 
-.image { height: 100px; text-indent: -9999px; display: block; border-right: 1px solid white; }
 
-.batman { background: url(../images/batman.jpg) center center no-repeat; }
-.spiderman { background: url(../images/spiderman.jpg) center center no-repeat; }
-.aquaman { background: url(../images/aquaman.jpg) center center no-repeat; }
-.ironman { background: url(../images/ironman.jpg) center center no-repeat; }
-.superman { background: url(../images/superman.jpg) center center no-repeat; }
+.artist-1 { background: url(../images/accordion-artist-1.jpg) center center no-repeat; }
+.artist-2 { background: url(../images/accordion-artist-2.jpg) center center no-repeat; }
+.artist-3 { background: url(../images/accordion-artist-3.jpg) center center no-repeat; }
+.artist-4 { background: url(../images/accordion-artist-4.jpg) center center no-repeat; }
+.artist-5 { background: url(../images/accordion-artist-5.jpg) center center no-repeat; }
 
-dt { padding: 5px; background: #900; color: white; border-bottom: 1px solid white; border-right: 1px solid white; }
+.image { 
+	height: 300px; 
+	text-indent: -9999px; 
+	display: block; 
+	border-right: 1px solid white; 
+	background-size: cover;
+}
+dt { padding: 5px; background: #900; color: white; border-bottom: 1px solid white; border-right: 1px solid white; margin-top: -50px; text-shadow: 3px 3px 30px rgba(0,0,0,0.8);}
 dd { position: absolute; left: -9999px; top: -9999px; width: 299px; background: #900; padding: 10px; color: white; border-right: 1px solid white; }
 
-dt:nth-of-type(1) { background: #b44835; }
-dd:nth-of-type(1) { background: #b44835; }
+dt:nth-of-type(1) { background: none; }
+dd:nth-of-type(1) { background: none; }
 
 dt:nth-of-type(2) { background: #ff7d3e; }
 dd:nth-of-type(2) { background: #ff7d3e; }
@@ -99,3 +126,27 @@ dd:nth-of-type(6) { background: #656b60; }
 				text-align: center;
 			}
 
+
+/* SECTION: Songs */
+
+#songs ol{
+	border: 1px solid #E5E5E5;
+	padding: 0;
+}
+
+#songs li{
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
+#songs li.song:nth-child(even){
+	background: #eee;
+}
+
+.artist-name{
+	padding: 0 20px;
+}
+
+footer{
+	padding: 25px;
+}

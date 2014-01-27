@@ -66,7 +66,7 @@ $(function() {
             
             // make other columns the small size
             $otherWraps.animate({
-                width: 175
+                width: 185
             }).removeClass("curCol");
             
             // make sure the correct column is current
