@@ -61,13 +61,13 @@ $(function() {
             
             // make the current column the large size
             $parentWrap.animate({
-                width: 320
-            }).addClass("curCol");
+                //width: 320
+            }).removeClass("col-md-2 col-sm-2 col-xs-12").addClass("curCol col-md-4 col-sm-4 col-xs-12");
             
             // make other columns the small size
             $otherWraps.animate({
-                width: 185
-            }).removeClass("curCol");
+                //width: 185
+            }).removeClass("curCol col-md-4 col-sm-4 col-xs-12").addClass("col-md-2 col-sm-2 col-xs-12");
             
             // make sure the correct column is current
             $allTitles.removeClass("current");

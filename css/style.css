@@ -1,15 +1,8 @@
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-
 /*  DEFAULTS */
 
 #main{
 	background: #FAFAFA;
 	margin-top: 50px;
-}
-
-ul, li{
-	list-style: none;
 }
 
 .navbar-default {
@@ -25,7 +18,7 @@ ul, li{
 	height: 300px; 
 }
 
-.info-col { float: left; width: 132px; height: 100%; padding: 0; }
+.info-col { float: left; height: 100%; padding: 0; }
 .info-col h2 { text-align: center; font-weight: normal; padding: 25px 0; }
 
 
