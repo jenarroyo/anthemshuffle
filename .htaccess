@@ -1,0 +1,8 @@
+Options -MultiViews +FollowSymLinks
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.http://anthemshuffle.azurewebsites.net/$ [NC]
+RewriteRule ^(.*)$ http://anthemshuffle.azurewebsites.net/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
