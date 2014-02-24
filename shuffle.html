@@ -29,12 +29,12 @@
   </head>
 
   <body>
-   <!--
-    <iframe id="iFrame-header" src="header.html" class="container col-md-12"> 
+    <!--
+  	<iframe id="iFrame-header" src="header.html" class="container col-md-12"> 
       <p>Your browser does not support iframes.</p>
     </iframe>
-    -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	-->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header col-md-5">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -67,12 +67,11 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-  
 
     <div id="main" class="container col-md-10 col-md-offset-1">
     	<section class="container">
     		<div class="col-md-4">
-    			<h2 class="page-title" id="artists-title">ARTISTS</h2>
+    			<h2 class="page-title" id="albums-title">SHUFFLE</h2>
     		</div>
     		<div class="col-md-4 col-md-offset-4">
     			<ul id="result-sorting" class="list-unstyled list-inline">
@@ -87,18 +86,38 @@
 
 		<!--section.artist-page>ul.list-unstyled>li.artist-thumb.col-md-2.col-sm-3.col-xs-4*25>img[src="images/artist-1.jpg"].img-responsive+h5{Artist Name $} -->
 
-		<section class="artist-page">
-			
-			Artist name: Artist
-
-			<div>
-
-			</div>
-
+		<section class="album-page">
+			<ul class="list-unstyled">
+				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+					<img src="images/album-1.jpg" alt="" class="img-responsive">
+					<a href="" class="album-link"><h5>Album Name 1</h5></a>
+				</li>
+				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+					<img src="images/album-1.jpg" alt="" class="img-responsive">
+					<a href="" class="album-link"><h5>Album Name 2</h5></a>
+				</li>
+				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+					<img src="images/album-1.jpg" alt="" class="img-responsive">
+					<a href="" class="album-link"><h5>Album Name 3</h5></a>
+				</li>
+				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+					<img src="images/album-1.jpg" alt="" class="img-responsive">
+					<a href="" class="album-link"><h5>Album Name 4</h5></a>
+				</li>
+				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+					<img src="images/album-1.jpg" alt="" class="img-responsive">
+					<a href="" class="album-link"><h5>Album Name 5</h5></a>
+				</li>
+				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+					<img src="images/album-1.jpg" alt="" class="img-responsive">
+					<a href="" class="album-link"><h5>Album Name 6</h5></a>
+				</li>
+				
+			</ul>
 		</section>
 		
 
-		<section id="artists-pagination" class="pagination col-md-12">
+		<section id="albums-pagination" class="pagination col-md-12">
 			<div class="page-arrows col-md-1" id="arrow-prev">
 				<span class="glyphicon glyphicon-chevron-left pull-left">&nbsp;</span>
 			</div>
@@ -128,15 +147,13 @@
 
     </div> <!-- /container -->
 
-    <iframe id="iFrame-footer" src="footer.html" class="container col-md-12"> 
+	<iframe id="iFrame-footer" src="footer.html" class="container col-md-12"> 
       <p>Your browser does not support iframes.</p>
     </iframe>
-    
-   
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
 </body>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/hf.js"></script>>
 </html>
