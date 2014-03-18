@@ -8,6 +8,14 @@
 .navbar-default {
 }
 
+.ellipsis{
+overflow: hidden;
+text-overflow: ellipsis;
+-o-text-overflow: ellipsis;
+white-space: nowrap;
+width: 100%;
+}
+
 /* SECTION: Artists */
 
 #artists { 
@@ -120,6 +128,21 @@ dd:nth-of-type(6) { background: #656b60; }
 
 
 /* ===================== PAGES ======================= */
+#top-artists-list{
+	border: 1px solid #E5E5E5;
+	padding: 0;
+}
+
+li.artist{
+	list-style-type: decimal;
+	list-style-position: inside;
+	padding: 8px;
+}
+
+li.artist:nth-child(even){
+	background: #eee;
+}
+
 
 #artists-title{
 
@@ -136,17 +159,7 @@ dd:nth-of-type(6) { background: #656b60; }
 		
 	}
 
-	.artist-page li.artist-thumb{
-		
-	}
-
-	.artist-thumb img{
-
-	}
-
-	.artist-thumb h5{
-
-	}
+	
 
 #artists-pagination{
 	padding: 0;
@@ -183,18 +196,6 @@ dd:nth-of-type(6) { background: #656b60; }
 		border-radius: 5px;
 	}
 
-#iFrame-header{
-		height: 100%;
-		width: 100%;
-		border:none;
-		padding: 0;
-	}
-#iFrame-footer{
-		height: 100%;
-		width: 100%;
-		border:none;
-		padding: 0;
-	}
 
 #album-details li.album-thumb:nth-child(even){
 	background: #eee;

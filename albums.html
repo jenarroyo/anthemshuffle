@@ -86,9 +86,9 @@
 
 		<!--section.artist-page>ul.list-unstyled>li.artist-thumb.col-md-2.col-sm-3.col-xs-4*25>img[src="images/artist-1.jpg"].img-responsive+h5{Artist Name $} -->
 
-		<section class="album-page">
-			<ul class="list-unstyled">
-				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
+		<section id="albums" class="album-page">
+			<ul class="list-unstyled" id="top-albums-list">
+				<!--<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
 					<img src="images/album-1.jpg" alt="" class="img-responsive">
 					<a href="album.html" class="album-link"><h5>Album Name 1</h5></a>
 				</li>
@@ -207,7 +207,7 @@
 				<li class="album-thumb col-md-2 col-sm-3 col-xs-4">
 					<img src="images/album-1.jpg" alt="" class="img-responsive">
 					<a href="album.html" class="album-link"><h5>Album Name 30</h5></a>
-				</li>
+				</li>-->
 			</ul>
 		</section>
 		
@@ -247,10 +247,36 @@
         Copyright &copy; 2014 AnthemShuffle
       </footer>
     </div>
+<script>
+$(function() {
 
-    <!-- Bootstrap core JavaScript
+    $.ajax({
+     url:'http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=30&country=us&apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp',
+     dataType: 'jsonp', 
+     success:function(result){
+        
+        var showAlbums = '',
+            track
+            ;
+
+        for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
+
+            track = result['message']['body']['track_list'][i]['track'];
+            showAlbums += '<li class="album-thumb col-md-2 col-sm-3 col-xs-4"><img src="'+track['album_coverart_350x350']+'" alt="" class="img-responsive"><a href="#" class="album-link"><h5 class="ellipsis">'+track['album_name']+'</a><br><a href="#"><h5 class="albums-artist-name">by: '+track['artist_name']+'</h5></a></li>';
+            	
+        	$('#top-albums-list').html(showAlbums);
+        }
+     },
+     error:function(){
+         alert("Error");
+     },
+    });
+});
+</script>
+   
+</body>
+	<!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
-</body>
 </html>
