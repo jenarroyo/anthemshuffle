@@ -20,7 +20,8 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <!--script type='text/javascript' src='js/jquery.min.js'></script-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
 	<!--link rel="stylesheet/less" type="text/css" href="css/style.less" /-->
@@ -108,8 +109,8 @@
 
 		<section id="albums" class="container col-md-12">
 			<h3>Albums</h3>
-			<ul class="list-unstyled col-md-12">
-				<li class="album col-md-2 col-sm-4 col-xs-6">
+			<ul class="list-unstyled col-md-12" id="top-albums-list">
+				<!--li class="album col-md-2 col-sm-4 col-xs-6">
 					<div class="album-info">
 						<img src="images/vinyl.png" alt="" class="album-img img-responsive">
 						<p>
@@ -168,163 +169,13 @@
 							</a><a href="artist.html"  class="artist-link">by <span>Artist Name</span></a>
 						</p>
 					</div>
-				</li>
+				</li-->
 			</ul>
 		</section>
 
 		<section id="songs" class="container col-md-12">
 			<h3>Top 30 Songs</h3>
-			<ol class="col-md-12">
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 01</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 01</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 02</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 02</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 03</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 03</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 04</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 04</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 05</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 05</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 06</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 06</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 07</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 07</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 08</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 08</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 09</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 09</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 10</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 10</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 11</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 11</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 12</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 12</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 13</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 13</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 14</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 14</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 15</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 15</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 16</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 16</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 17</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 17</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 18</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 18</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 19</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 19</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 20</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 20</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 21</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 21</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 22</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 22</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 23</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 23</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 24</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 24</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 25</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 25</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 26</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 26</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 27</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 27</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 28</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 28</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 29</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 29</h5>
-				</a></li>
-			<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link">
-					<h4 class="song-title">Sample Song Title 30</h4>
-				</a><a href="artist.html" class="artist-link">
-					<h5 class="artist-name">by Artist Name 30</h5>
-				</a></li>
+			<ol class="col-md-12" id="top-tracks-list">
 			</ol>
 		</section>	
 
@@ -335,6 +186,56 @@
       </footer>
     </div>
 
+<script>
+$(function() {
+
+    $.ajax({
+     url:'http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=30&country=us&apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp',
+     dataType: 'jsonp', 
+     success:function(result){
+        
+        var showTrack = '',
+            track
+            ;
+
+        for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
+
+            track = result['message']['body']['track_list'][i]['track'];
+            showTrack += '<li class="song col-md-4 col-sm-6 col-xs-12"><a href="#" class="song-link"><h4 class="song-title">'+track['track_name']+'</h4></a><a href="artist.html" class="artist-link"><h5 class="artist-name">by '+track['artist_name']+'</h5></a></li>';
+
+        	$('#top-tracks-list').html(showTrack);
+        }
+     },
+     error:function(){
+         alert("Error");
+     },
+    });
+
+
+    $.ajax({
+     url:'http://api.musixmatch.com/ws/1.1/chart.tracks.get?page=1&page_size=6&country=us&apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp',
+     dataType: 'jsonp', 
+     success:function(result){
+        
+        var showAlbums = '',
+            track
+            ;
+
+        for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
+
+            track = result['message']['body']['track_list'][i]['track'];
+            showAlbums += '<li class="album col-md-2 col-sm-4 col-xs-6"><div class="album-info"><img src="'+track['album_coverart_350x350']+'" alt="" class="album-img img-responsive"><p><a href="#" class="album-link"><span>'+track['album_name']+'</span><br></a><a href="" class="artist-link">by <span>'+track['artist_name']+'</span></a></p></div></li>';
+
+        	$('#top-albums-list').html(showAlbums);
+        }
+     },
+     error:function(){
+         alert("Error");
+     },
+    });
+});
+
+</script>
     
 </body>
 	<!-- Bootstrap core JavaScript
