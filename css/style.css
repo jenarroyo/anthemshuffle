@@ -5,15 +5,57 @@
 	margin-top: 50px;
 }
 
+#logo{
+
+}
+
+#logo-img{
+	width: 500px;
+	height: 45px;
+	background: url(../images/anthem.png) no-repeat;
+	background-size: contain;
+}
+
 .navbar-default {
 }
 
+.navbar a{
+	text-transform: uppercase;
+}
+
 .ellipsis{
-overflow: hidden;
-text-overflow: ellipsis;
--o-text-overflow: ellipsis;
-white-space: nowrap;
-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+}
+
+#search{
+	z-index: 9999;
+	padding: 5px;
+}
+
+.search-icon{
+	position: fixed;
+	right: 11%;
+	top: 15px;
+}
+
+#search-bar{
+	width: 130px;
+	position: fixed;
+	right: 10%;
+	-webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+#search-bar:focus{
+	position: fixed;
+	right: 10%;
+	width: 60%;
 }
 
 /* SECTION: Artists */
