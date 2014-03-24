@@ -92,23 +92,7 @@
 					<img src="images/album-1.jpg" alt="" class="img-responsive">
 					<a href="album.html" class="album-link"><h5>Album Name 1</h5></a>
 					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nisi error perspiciatis delectus quisquam. Suscipit, inventore alias cumque assumenda dicta ratione expedita facere nemo quod eligendi optio minima. Repellat, officia!	<br><br>
-
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, recusandae, nulla voluptatem molestiae harum doloremque voluptate hic necessitatibus aspernatur reprehenderit quibusdam cumque eveniet maiores excepturi laudantium eos ratione eaque mollitia!<br><br>
-
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nisi error perspiciatis delectus quisquam. Suscipit, inventore alias cumque assumenda dicta ratione expedita facere nemo quod eligendi optio minima. Repellat, officia! <br><br>
-
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, recusandae, nulla voluptatem molestiae harum doloremque voluptate hic necessitatibus aspernatur reprehenderit quibusdam cumque eveniet maiores excepturi laudantium eos ratione eaque mollitia!<br><br>
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam nisi error perspiciatis delectus quisquam. Suscipit, inventore alias cumque assumenda dicta ratione expedita facere nemo quod eligendi optio minima. Repellat, officia! <br><br>
-
-
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, recusandae, nulla voluptatem molestiae harum doloremque voluptate hic necessitatibus aspernatur reprehenderit quibusdam cumque eveniet maiores excepturi laudantium eos ratione eaque mollitia!<br><br>
-					</p>
-
+						
 				</li>				
 			</ul>
 		</section>		
@@ -119,6 +103,32 @@
         Copyright &copy; 2014 AnthemShuffle
       </footer>
     </div>
+    <script>
+    $(function() {
+
+    $.ajax({
+     url:'http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=0d74af2fc514e207179adfcb59b6dac3',
+     dataType: 'jsonp', 
+     success:function(result){
+        
+        var showTrack = '',
+            track
+            ;
+
+        for (var i=0;i<result['message']['body']['lyrics_id'].length;i++){ 
+
+            track = result['message']['body']['lyrics_id'][i]['lyrics_body'];
+            showTrack += '<li class="album-thumb"><a href="#" class="album-link"><h4 class="song-title">'+track['lyrics_id']+'</h4></a><a href="artist.html" class="artist-link"><h5 class="artist-name">by: '+track['lyrics_body']+'</h5></a></li>';
+
+
+          $('#lyrics').html(showLyrics);
+        }
+     },
+     error:function(){
+         alert("Error");
+     },
+    });
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
