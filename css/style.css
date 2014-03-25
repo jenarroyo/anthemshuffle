@@ -385,6 +385,8 @@ li.artist:nth-child(even){
     width: 100% !important;
 }
 
+.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+
 footer{
 	font-size: 0.8em;
 	padding: 50px;
