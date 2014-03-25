@@ -1,5 +1,13 @@
 /*  DEFAULTS */
 
+body{
+	background: #FAFAFA;
+}
+
+body, a, p, h1, h2, h3, h4, h5, h6{
+	font-family: 'Muli', sans-serif;
+}
+
 #main{
 	background: #FAFAFA;
 	margin-top: 50px;
@@ -14,6 +22,10 @@
 	height: 45px;
 	background: url(../images/anthem.png) no-repeat;
 	background-size: contain;
+}
+
+.navbar-default {
+	background-color: rgba(0,0,0,0.7);
 }
 
 .navbar-default {
@@ -57,6 +69,110 @@
 	right: 10%;
 	width: 60%;
 }
+
+.page-title{
+	font-weight: 400;
+}
+
+/* SECTION: Lyrics */
+
+#lyrics-details{
+	background: rgba(0,0,0,0.79);
+	padding: 20px;
+}
+
+	#lyrics-album-art{
+
+	}
+
+	#lyrics-album-art img{
+
+	}
+
+	#lyrics-info{
+		color: #FFF;
+	}
+
+		#lyrics-title{
+			font-size: 1.8em;
+			line-height: 130%;
+		}
+
+		#lyrics-artist{
+			font-size: 1.2em;
+			line-height: 130%;
+		}
+
+		#lyrics-album-name{
+			font-size: 1em;
+			line-height: 130%;
+		}
+
+#lyrics-body{
+
+}
+
+	#lyrics-contents{
+		
+	}
+
+	#lyrics-contents p{
+		line-height: 200%;
+		padding-bottom: 20px;
+		padding-left: 35px;
+	}
+
+#lyrics-related{
+
+}
+
+	#preview-about{
+		
+	}
+
+		#preview-about img{
+			
+		}
+
+		#preview-about h3{
+			
+		}
+
+		#preview-about p{
+			
+		}
+
+	#preview-disc{
+		
+	}
+
+		#preview-disc h5{
+			
+		}
+
+		#preview-disc ul{
+			
+		}
+
+		#preview-disc li{
+			
+		}
+
+		#preview-disc li a{
+			
+		}
+
+		#preview-disc img{
+			
+		}
+
+		#preview-disc h5{
+			
+		}
+
+		#preview-disc p{
+			
+		}
 
 /* SECTION: Artists */
 
@@ -241,4 +357,9 @@ li.artist:nth-child(even){
 
 #album-details li.album-thumb:nth-child(even){
 	background: #eee;
+}
+
+footer{
+	font-size: 0.8em;
+	padding: 50px;
 }

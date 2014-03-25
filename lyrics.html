@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -27,6 +28,15 @@
 	<!--script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script> <!--LESS 1.6.1-->
     <script type='text/javascript' src='js/infogrid.js'></script>   
   </head>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=738817786149592";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
 
   <body>
     <!--
@@ -96,17 +106,89 @@
 
 
 		<!--section.artist-page>ul.list-unstyled>li.artist-thumb.col-md-2.col-sm-3.col-xs-4*25>img[src="images/artist-1.jpg"].img-responsive+h5{Artist Name $} -->
+      
+      <section class="col-md-3" id="lyrics-details">
+        <div class="col-md-12 col-sm-3" id="lyrics-album-art">
+          <img src="images/album_space-oddity.jpg" alt="Space Oddity">
+        </div>
+        <div class="col-md-12 col-sm-8" id="lyrics-info">
+          <h4 id="lyrics-title">Space Oddity</h4>
+          <h4 id="lyrics-artist">David Bowie</h4>
+          <h5 id="lyrics-album-name">Album: Space Oddity</h5>
+        </div>
+      </section>
 
-		<section id="album-details"class="album-page">
-			<ul class="list-unstyled">
-				<li class="album-thumb col-md-">
-					<img src="images/album-1.jpg" alt="" class="img-responsive">
-					<a href="album.html" class="album-link"><h5>Album Name 1</h5></a>
-					<p>
-						
-				</li>				
-			</ul>
-		</section>		
+      <section class="col-md-6" id="lyrics-body">
+        <div class="col-md-12 col-sm-8" id="lyrics-contents">
+          <p>
+            Lorem ipsum dolor sit amet, <br>
+            Consectetur adipisicing elit <br>
+            Consequatur <br>
+            Alias, provident 
+          </p>
+          <p>
+            Unde, incidunt blanditiis  <br>
+            dolore molestiae ullam placeat  <br>
+            quod nam ipsam fugit et esse  <br>
+            rem eligendi similique 
+          </p>
+          <p>
+            Fugit, optio, numquam sint  <br>
+            Nam doloribus voluptatum  <br>
+            Commodi tenetur voluptates  <br>
+            Iusto inventore dolore quidem <br>
+          </p>
+          <p>
+            Rerum, molestiae, obcaecati,  <br>
+            veritatis minima ullam maxime  <br>
+            consequatur minus  <br>
+            debitis illo soluta explicabo <br>
+          </p>
+          <p>
+            In, aperiam, fuga,  <br>
+            repellendus,  <br>
+            voluptatibus architecto <br>
+            quas cumque ab sit <br>
+           </p>
+        </div>
+        <!--div class="col-md-4 col-sm-4"><img src="images/insert-ad-here.png" alt=""></div-->
+      </section>
+      
+      <section class="col-md-3" id="lyrics-related">
+        <div id="preview-about">
+          <img src="images/artist_david-bowie.jpg" alt="David Bowie">
+          <h3>About David Bowie</h3>
+          <p>Lorem ipsum dolor sit amet. Bequisquam, reiciendis minus dignissimos itaque ex voluptatum ratione sequi [...] <a href="">More &raquo;</a></p>
+        </div>
+        <hr>
+        <div id="preview-disc">
+          <h5>Recent Discography</h5>
+          <ul class="list-unstyled">
+            <li><a href="">
+                <img src="images/album_david-bowie-1.jpg" alt="" class="preview-disc-album">
+                <h5 class="preview-album-name">Platinum Collection</h5>
+                <p class="preview-album-year">2005</p>
+              </a></li>
+            <li><a href="">
+                <img src="images/album_david-bowie-2.jpg" alt="" class="preview-disc-album">
+                <h5 class="preview-album-name">David Live</h5>
+                <p class="preview-album-year">2005</p>
+              </a></li>
+            <li><a href="">
+                <img src="images/album_david-bowie-3.jpg" alt="" class="preview-disc-album">
+                <h5 class="preview-album-name">Reality</h5>
+                <p class="preview-album-year">2003</p>
+              </a></li>
+          </ul>
+          <a href="" id="more-disc">Browse Full Discography</a>
+        </div>
+      </section>
+      
+      <section>
+        <div class="fb-comments" data-href="http://example.com/comments" data-numposts="5" data-colorscheme="light"></div>
+      </section>
+
+
     </div> <!-- /container -->
 
     <div id="main" class="container">
