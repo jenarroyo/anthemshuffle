@@ -159,7 +159,7 @@
         </div>
         <!--div class="col-md-4 col-sm-4"><img src="images/insert-ad-here.png" alt=""></div-->
 
-        <div class="fb-comments" data-href="http://example.com/comments" data-numposts="5" data-colorscheme="light"></div>
+        <div class="fb-comments" data-href="http://anthemshuffle.com" data-numposts="6" id="fb" data-colorscheme="light"></div>
 
       </section>
       
@@ -227,7 +227,10 @@
      },
     });
     </script>
-
+    <script type="text/javascript">
+      var sUrl = window.location;
+      document.getElementById('fb').setAttribute('href', sUrl);
+    </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
