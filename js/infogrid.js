@@ -43,7 +43,7 @@ $(function() {
             
             // return all titles (except current one) to normal size
             $allTitles.animate({
-                fontSize: "14px",
+                fontSize: "20px",
                 paddingTop: 5,
                 paddingRight: 5,
                 paddingBottom: 5,

@@ -8,9 +8,18 @@ body, a, p, h1, h2, h3, h4, h5, h6{
 	font-family: 'Muli', sans-serif;
 }
 
+a{
+	color: #333;
+}
+
+a:hover, a:focus{
+	text-decoration: none;
+	color: red;
+}
+
 #main{
 	background: #FAFAFA;
-	margin-top: 50px;
+	margin-top: 23px;
 }
 
 #logo{
@@ -25,7 +34,7 @@ body, a, p, h1, h2, h3, h4, h5, h6{
 }
 
 .navbar-default {
-	background-color: rgba(0,0,0,0.7);
+	background-color: rgba(0,0,0,0.8);
 }
 
 .navbar-default {
@@ -50,14 +59,14 @@ body, a, p, h1, h2, h3, h4, h5, h6{
 
 .search-icon{
 	position: fixed;
-	right: 11%;
+	right: 3%;
 	top: 15px;
 }
 
 #search-bar{
 	width: 130px;
 	position: fixed;
-	right: 10%;
+	right: 2%;
 	-webkit-transition: all 0.8s ease-in-out;
     -moz-transition: all 0.8s ease-in-out;
     -o-transition: all 0.8s ease-in-out;
@@ -66,8 +75,8 @@ body, a, p, h1, h2, h3, h4, h5, h6{
 
 #search-bar:focus{
 	position: fixed;
-	right: 10%;
-	width: 60%;
+	right: 2%;
+	width: 70%;
 }
 
 .page-title{
@@ -75,6 +84,10 @@ body, a, p, h1, h2, h3, h4, h5, h6{
 }
 
 /* SECTION: Lyrics */
+
+#lyrics-page-title{
+
+}
 
 #lyrics-details{
 	background: rgba(0,0,0,0.79);
@@ -96,6 +109,7 @@ body, a, p, h1, h2, h3, h4, h5, h6{
 		#lyrics-title{
 			font-size: 1.8em;
 			line-height: 130%;
+			color: red;
 		}
 
 		#lyrics-artist{
@@ -237,32 +251,29 @@ dd:nth-of-type(6) { background: #656b60; }
 		}
 
 			.album-img{
-
-				-webkit-transform: rotate(-360deg);
-				-moz-transform: rotate(-360deg);
-				-ms-transform: rotate(-360deg);
-				-o-transform: rotate(-360deg);
-				transform: rotate(-360deg);
-				
-				-webkit-transition: all 2s ease-in-out;
-				-moz-transition: all 2s ease-in-out;
-				-ms-transition: all 2s ease-in-out;
-				-o-transition: all 2s ease-in-out;
-				transition: all 2s ease-in-out;
+				-webkit-transition: all 0.5s ease-in-out;
+				-moz-transition: all 0.5s ease-in-out;
+				-ms-transition: all 0.5s ease-in-out;
+				-o-transition: all 0.5s ease-in-out;
+				transition: all 0.5s ease-in-out;
 			}
 
 			.album-img:hover{
-				-webkit-transform: rotate(0deg);
-				-moz-transform: rotate(0deg);
-				-ms-transform: rotate(0deg);
-				-o-transform: rotate(0deg);
-				transform: rotate(0deg);
+				-webkit-transform: scale(1.1);
 			}
 
 			.album-info p{
-				text-align: center;
+				padding: 10px 0 0 0;
 			}
 
+		.album-link{
+			color: #333;
+			font-weight: bold;
+		}
+
+		.artist-link{
+			color: #333;
+		}
 
 /* SECTION: Songs */
 
@@ -277,11 +288,17 @@ dd:nth-of-type(6) { background: #656b60; }
 }
 
 #songs li.song:nth-child(even){
-	background: #eee;
+	background: #F5F5F5;
+}
+
+.song-title{
+	font-size: 1em;
+	font-weight: bold;
+	color: #333;
 }
 
 .artist-name{
-	padding: 0 20px;
+	padding: 0 15px;
 }
 
 
@@ -305,8 +322,13 @@ li.artist:nth-child(even){
 #artists-title{
 
 }
-	#result-sorting ul{
+	#result-sorting{
+		padding: 30px;
+	}
 
+	#result-sorting li a:hover{
+		border-bottom: solid 2px rgb(224, 71, 71);
+		padding: 0;
 	}
 
 .artist-page{
