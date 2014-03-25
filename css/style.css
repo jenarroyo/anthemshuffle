@@ -381,6 +381,10 @@ li.artist:nth-child(even){
 	background: #eee;
 }
 
+.fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
+    width: 100% !important;
+}
+
 footer{
 	font-size: 0.8em;
 	padding: 50px;
