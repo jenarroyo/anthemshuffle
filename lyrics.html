@@ -27,6 +27,13 @@
 	<!--link rel="stylesheet/less" type="text/css" href="css/style.less" /-->
 	<!--script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script> <!--LESS 1.6.1-->
     <script type='text/javascript' src='js/infogrid.js'></script>   
+    <script type="text/javascript">
+      var sUrl = window.location;
+      var fbDiv = document.getElementById('fb-container');
+      var fbWidth = fbDiv.getAttribute('width');
+      document.getElementById('fb').setAttribute('href', sUrl);
+      document.getElementById('fb').setAttribute('data-width', fbWidth);
+    </script>
   </head>
   <body>
     <!--
@@ -228,13 +235,6 @@
       js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=738817786149592";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-    </script>
-    <script type="text/javascript">
-      var sUrl = window.location;
-      var fbDiv = document.getElementById('fb-container');
-      var fbWidth = fbDiv.getAttribute('width');
-      document.getElementById('fb').setAttribute('href', sUrl);
-      document.getElementById('fb').setAttribute('data-width', fbWidth);
     </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
