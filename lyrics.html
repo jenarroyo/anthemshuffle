@@ -150,7 +150,7 @@
         <!--div class="col-md-4 col-sm-4"><img src="images/insert-ad-here.png" alt=""></div-->
 
         <div class="fb-container col-md-12">
-          <div class="fb-comments" data-href="http://anthemshuffle.com" data-numposts="6" id="fb" data-colorscheme="light"></div>
+          <div class="fb-comments" data-href="http://anthemshuffle.com" data-numposts="6" data-width="" id="fb" data-colorscheme="light"></div>
         </div>
         
 
@@ -231,7 +231,10 @@
     </script>
     <script type="text/javascript">
       var sUrl = window.location;
+      var fbDiv = document.getElementById('fb-container');
+      var fbWidth = fbDiv.getAttribute('width');
       document.getElementById('fb').setAttribute('href', sUrl);
+      document.getElementById('fb').setAttribute('data-width', fbWidth);
     </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
