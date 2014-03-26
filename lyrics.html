@@ -29,8 +29,8 @@
     <script type='text/javascript' src='js/infogrid.js'></script>   
     <script type="text/javascript">
       var sUrl = window.location;
-      var fbDiv = getElementById('fb-container');
-      var fbWidth = fbDiv.getAttribute('width');
+      var fbDiv = document.getElementById('fb-container');
+      var fbWidth = fbDiv.width;
       console.log(fbWidth);
       document.getElementById('fb').setAttribute('href', sUrl);
       document.getElementById('fb').setAttribute('data-width', fbWidth);
