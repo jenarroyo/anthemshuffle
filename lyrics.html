@@ -27,14 +27,6 @@
 	<!--link rel="stylesheet/less" type="text/css" href="css/style.less" /-->
 	<!--script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script> <!--LESS 1.6.1-->
     <script type='text/javascript' src='js/infogrid.js'></script>   
-    <script type="text/javascript">
-      var sUrl = window.location;
-      var fbDiv = document.getElementById('fb-container');
-      var fbWidth = fbDiv.getAttribute("width");
-      console.log(fbWidth);
-      document.getElementById('fb').setAttribute('href', sUrl);
-      document.getElementById('fb').setAttribute('data-width', fbWidth);
-    </script>
   </head>
   <body>
     <!--
@@ -241,5 +233,14 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+      var sUrl = window.location;
+      var fbDiv = document.getElementById('fb-container');
+      var fbWidth = fbDiv.getAttribute("width");
+      console.log(fbWidth);
+      document.getElementById('fb').setAttribute('href', sUrl);
+      document.getElementById('fb').setAttribute('data-width', fbWidth);
+    </script>
 </body>
 </html>
