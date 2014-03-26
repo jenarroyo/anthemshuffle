@@ -155,7 +155,7 @@ $(function() {
         for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
 
             track = result['message']['body']['track_list'][i]['track'];
-            showTrack += '<li class="song col-md-4 col-sm-6 col-xs-12"><a href="#" class="song-link"><h4 class="song-title">'+track['track_name']+'</h4></a><a href="artist.html" class="artist-link"><h5 class="artist-name ellipsis">by: '+track['artist_name']+'</h5></a></li>';
+            showTrack += '<li class="song col-md-4 col-sm-6 col-xs-12"><a href="lyrics.html" class="song-link"><h4 class="song-title">'+track['track_name']+'</h4></a><a href="artist.html" class="artist-link"><h5 class="artist-name ellipsis">by: '+track['artist_name']+'</h5></a></li>';
 
         	$('#top-tracks-list').html(showTrack);
         }
@@ -178,7 +178,7 @@ $(function() {
         for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
 
             track = result['message']['body']['track_list'][i]['track'];
-            showAlbums += '<li class="album col-md-2 col-sm-4 col-xs-6"><div class="album-info"><img src="'+track['album_coverart_350x350']+'" alt="" class="album-img img-responsive"><p><a href="#" class="album-link"><span>'+track['album_name']+'</span><br></a><a href="" class="artist-link">by: <span>'+track['artist_name']+'</span></a></p></div></li>';
+            showAlbums += '<li class="album col-md-2 col-sm-4 col-xs-6"><div class="album-info"><a href="album.html" class="album-link"><img src="'+track['album_coverart_350x350']+'" alt="" class="album-img img-responsive"></a><p><a href="album.html" class="album-link"><span>'+track['album_name']+'</span><br></a><a href="artist.html" class="artist-link">by: <span>'+track['artist_name']+'</span></a></p></div></li>';
 
         	$('#top-albums-list').html(showAlbums);
         }
