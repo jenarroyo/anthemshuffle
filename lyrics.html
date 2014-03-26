@@ -233,11 +233,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
-    
+
     <script type="text/javascript">
       var sUrl = window.location;
-      var fbDiv = document.getElementById('fb-container');
-      var fbWidth = fbDiv.getAttribute("width");
+      var fbWidth = document.getElementById('fb-container').offsetWidth;
       console.log(fbWidth);
       document.getElementById('fb').setAttribute('href', sUrl);
       document.getElementById('fb').setAttribute('data-width', fbWidth);
