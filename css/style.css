@@ -90,8 +90,8 @@ a:hover, a:focus{
 }
 
 #lyrics-details{
-	background: rgba(0,0,0,0.79);
 	padding: 20px;
+	border-right: solid 1px #D8D8D8;
 }
 
 	#lyrics-album-art{
@@ -103,7 +103,7 @@ a:hover, a:focus{
 	}
 
 	#lyrics-info{
-		color: #FFF;
+
 	}
 
 		#lyrics-title{
@@ -123,7 +123,7 @@ a:hover, a:focus{
 		}
 
 #lyrics-body{
-
+	margin-top: 35px;
 }
 
 	#lyrics-contents{
@@ -137,7 +137,7 @@ a:hover, a:focus{
 	}
 
 #lyrics-related{
-
+	background: #eee;
 }
 
 	#preview-about{
@@ -145,27 +145,56 @@ a:hover, a:focus{
 	}
 
 		#preview-about img{
-			
+			margin-top: 20px;
 		}
 
 		#preview-about h3{
-			
+			font-size: 1.3em;
+		}
+
+		#preview-about h6{
+			font-size: 1.3em;
 		}
 
 		#preview-about p{
-			
+			font-size: 0.8em;
+			margin-bottom: 25px; 
+		}
+
+		#preview-about a{
+		}
+
+		#more-bio{
+			position: relative;
+			padding: 7% 15%;
+			font-size: 0.7em;
+			top: -5px;
+			background: #FFF;
 		}
 
 	#preview-disc{
 		
 	}
 
+		#more-disc{
+			position: relative;
+			padding: 7%;
+			font-size: 0.7em;
+			top: -25px;
+			background: #FFF;
+		}
+
+		#more-disc:hover, #more-bio:hover{
+			background: #D1D1D1;
+			color: #333;
+		}
+
 		#preview-disc h5{
 			
 		}
 
 		#preview-disc ul{
-			
+			margin-bottom: 45px;
 		}
 
 		#preview-disc li{
@@ -177,15 +206,15 @@ a:hover, a:focus{
 		}
 
 		#preview-disc img{
-			
+
 		}
 
-		#preview-disc h5{
-			
+		#preview-disc h6{
+			margin: 5px 0;
 		}
 
 		#preview-disc p{
-			
+			font-size: 0.8em;
 		}
 
 /* SECTION: Artists */
