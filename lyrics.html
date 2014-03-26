@@ -237,9 +237,11 @@
     <script type="text/javascript">
       var sUrl = window.location;
       var fbWidth = document.getElementById('fb-container').offsetWidth;
+      var fbSetWidth = fbWidth - 50;
       console.log(fbWidth);
+      console.log(fbSetWidth);
       document.getElementById('fb').setAttribute('href', sUrl);
-      document.getElementById('fb').setAttribute('data-width', fbWidth);
+      document.getElementById('fb').setAttribute('data-width', fbSetWidth);
     </script>
 </body>
 </html>
