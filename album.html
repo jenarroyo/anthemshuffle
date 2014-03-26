@@ -220,5 +220,32 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=738817786149592";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    
+
+    <!-- ===================FB COMMENT BOX==================== -->
+    <!-- Detect data-url from existing page and set data-width -->
+    <script type="text/javascript">
+      var sUrl = window.location;
+      var fbWidth = document.getElementById('fb-container').offsetWidth;
+      var fbSetWidth = fbWidth - 50;
+      console.log(fbWidth);
+      console.log(fbSetWidth);
+      document.getElementById('fb').setAttribute('href', sUrl);
+      document.getElementById('fb').setAttribute('data-width', fbSetWidth);
+    </script>
 </body>
 </html>
