@@ -82,6 +82,10 @@ a:hover, a:focus{
 .page-title{
 	font-weight: 400;
 }
+/* SECTION ALBUM */
+#album-info span{
+	font-weight: bold;
+}
 
 /* SECTION: Lyrics */
 
