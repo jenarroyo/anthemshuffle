@@ -30,7 +30,7 @@
     <script type="text/javascript">
       var sUrl = window.location;
       var fbDiv = document.getElementById('fb-container');
-      var fbWidth = fbDiv.width;
+      var fbWidth = fbDiv.getAttribute("width");
       console.log(fbWidth);
       document.getElementById('fb').setAttribute('href', sUrl);
       document.getElementById('fb').setAttribute('data-width', fbWidth);
