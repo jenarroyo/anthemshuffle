@@ -387,6 +387,15 @@ li.artist:nth-child(even){
 
 .fb-comments, .fb-comments iframe[style] {width: 100% !important;}
 
+.fb-comments{width: 100% !important;}
+.fb-comments iframe[style]{width: 100% !important;}
+.fb-like-box{width: 100% !important;}
+.fb-like-box iframe[style]{width: 100% !important;}
+.fb-comments span{width: 100% !important;}
+.fb-comments iframe span[style]{width: 100% !important;}
+.fb-like-box span{width: 100% !important;}
+.fb-like-box iframe span[style]{width: 100% !important;}
+
 footer{
 	font-size: 0.8em;
 	padding: 50px;
