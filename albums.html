@@ -8,33 +8,18 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
     <title>Anthem Shuffle - Lyrics on the GO!</title>
-
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
 
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
     <script type='text/javascript' src='js/jquery.min.js'></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/screen.css" rel="stylesheet">
-	<!--link rel="stylesheet/less" type="text/css" href="css/style.less" /-->
-	<!--script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script> <!--LESS 1.6.1-->
+
     <script type='text/javascript' src='js/infogrid.js'></script>   
   </head>
 
   <body>
-    <!--
-  	<iframe id="iFrame-header" src="header.html" class="container col-md-12"> 
-      <p>Your browser does not support iframes.</p>
-    </iframe>
-	-->
+
 	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div>
         <div class="navbar-header col-md-4 col-sm-4">
@@ -58,18 +43,6 @@
             <li class="active"><a class="menulink" href="albums.html">Albums</a></li>
             <li><a class="menulink" href="about.html">About</a></li>
             <li><a class="menulink" href="shuffle.html">Shuffle It!</a></li>
-            <!--<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>-->
             <li>
               <div id="search" class="input-group">
                 <input type="text" class="form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
@@ -77,7 +50,7 @@
               </div>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
       </div>
     </div>
 
@@ -275,7 +248,7 @@ $(function() {
         for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
 
             track = result['message']['body']['track_list'][i]['track'];
-            showAlbums += '<li class="album-thumb col-md-2 col-sm-3 col-xs-4"><img src="'+track['album_coverart_350x350']+'" alt="" class="img-responsive"><a href="#" class="album-link"><h5 class="ellipsis">'+track['album_name']+'</a><br><a href="#"><h5 class="albums-artist-name">by: '+track['artist_name']+'</h5></a></li>';
+            showAlbums += '<li class="album-thumb col-md-2 col-sm-3 col-xs-4"><img src="'+track['album_coverart_350x350']+'" alt="" class="img-responsive"><a href="album.html" class="album-link"><h5 class="ellipsis">'+track['album_name']+'</a><br><a href="artist.html"><h5 class="albums-artist-name">by: '+track['artist_name']+'</h5></a></li>';
             	
         	$('#top-albums-list').html(showAlbums);
         }
@@ -288,8 +261,5 @@ $(function() {
 </script>
    
 </body>
-	<!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
 </html>
