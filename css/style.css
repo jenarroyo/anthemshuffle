@@ -220,6 +220,17 @@ a:hover, a:focus{
 		#preview-disc p{
 			font-size: 0.8em;
 		}
+/* SECTION: ARTIST */
+#artist-discography div{
+	padding: 0;
+}
+ul#artist-album-list li:nth-child(odd){
+	background: #eee;	
+}
+
+.artist-album-item{
+	padding: 20px !important;
+}
 
 /* SECTION: Artists */
 
