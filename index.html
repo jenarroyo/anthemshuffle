@@ -152,7 +152,7 @@ $(function() {
         for (var i=0;i<result['message']['body']['track_list'].length;i++){ 
 
             track = result['message']['body']['track_list'][i]['track'];
-            showAlbums += '<li class="album col-md-2 col-sm-4 col-xs-6"><div class="album-info"><a href="album.html" class="album-link"><img src="'+track['album_coverart_350x350']+'" alt="" class="album-img img-responsive"></a><p><a href="album.html" class="album-link"><span>'+track['album_name']+'</span><br></a><a href="artist.html" class="artist-link ellipsis">by: <span>'+track['artist_name']+'</span></a></p></div></li>';
+            showAlbums += '<li class="album col-md-2 col-sm-4 col-xs-6"><div class="album-info"><a href="album.html" class="album-link"><img src="'+track['album_coverart_350x350']+'" alt="" class="album-img img-responsive"></a><p><a href="album.html" class="album-link ellipsis"><span>'+track['album_name']+'</span><br></a><a href="artist.html" class="artist-link ellipsis">by: <span>'+track['artist_name']+'</span></a></p></div></li>';
 
         	$('#top-albums-list').html(showAlbums);
         }
