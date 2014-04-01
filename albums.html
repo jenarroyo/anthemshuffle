@@ -16,6 +16,11 @@
     <link href="css/screen.css" rel="stylesheet">
 
     <script type='text/javascript' src='js/infogrid.js'></script>   
+
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   </head>
 
   <body>
@@ -42,7 +47,7 @@
             <li><a class="menulink" href="artists.html">Artists</a></li>
             <li class="active"><a class="menulink" href="albums.html">Albums</a></li>
             <li><a class="menulink" href="about.html">About</a></li>
-            <li><a class="menulink" href="shuffle.html">Shuffle It!</a></li>
+            <li><a class="menulink fancybox" rel="group" href="#shuffle">Shuffle It!</a></li>
             <li>
               <div id="search" class="input-group">
                 <input type="text" class="form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
@@ -259,6 +264,29 @@ $(function() {
     });
 });
 </script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });
+</script>
+
+<div style="display: none;" id="shuffle" class="text-center">
+  <h2>SHUFFLE!</h2>
+  <div class="col-md-4"><a href="artist.html">
+      <img src="images/album-1.jpg" alt="">
+      <h4>ARTIST</h4>
+    </a></div>
+  <div class="col-md-4"><a href="album.html">
+      <img src="images/album-1.jpg" alt="">
+      <h4>ALBUM</h4>
+    </a></div>
+  <div class="col-md-4"><a href="lyrics.html">
+      <img src="images/album-1.jpg" alt="">
+      <h4>LYRICS</h4>
+    </a></div>
+</div>
+
    
 </body>
     <script src="js/bootstrap.min.js"></script>
