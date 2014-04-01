@@ -19,7 +19,7 @@
 
     <script type='text/javascript' src='js/infogrid.js'></script>   
 
-    
+
     <!-- Add fancyBox -->
     <link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
     <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script> 
@@ -134,7 +134,7 @@ $(function() {
         for (var i=0;i<result['message']['body']['artist_list'].length;i++){ 
 
             artist = result['message']['body']['artist_list'][i]['artist'];
-            showAlbums += '<li class="artist col-md-4 col-sm-6 col-xs-12"><div class="artists-info"><p><a href="artist.html" class="artists-link"><span><h5>'+artist['artist_name']+'</h5></span></a></p></div></li>';
+            showAlbums += '<li class="artist col-md-4 col-sm-6 col-xs-12"><div class="artists-info"><p><a href="artist.html" class="artists-link"><span><h5 class="ellipsis">'+artist['artist_name']+'</h5></span></a></p></div></li>';
 
 
         	$('#top-artists-list').html(showAlbums);
