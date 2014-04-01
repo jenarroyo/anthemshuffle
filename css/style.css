@@ -87,6 +87,10 @@ a:hover, a:focus{
 	font-weight: bold;
 }
 
+#sort-result{
+	visibility: hidden;
+}
+
 /* SECTION: Lyrics */
 
 #lyrics-page-title{
