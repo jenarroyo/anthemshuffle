@@ -17,14 +17,6 @@ and (max-width : 650px) {
 	}
 }
 
-@media  all
-and (min-width : 300px) 
-and (max-width : 300px) {
-/* Styles */
-	.album {
-		min-height: 350px;
-	}
-}
 
 
 
