@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <title>Anthem Shuffle - Lyrics on the GO!</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Muli:300,400' rel='stylesheet' type='text/css'>
+
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/screen.css" rel="stylesheet">
+
+    <script type='text/javascript' src='js/infogrid.js'></script>   
+
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="js/fancyBox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/fancyBox/source/jquery.fancybox.pack.js?v=2.1.5"></script> 
+  </head>
+  <body>
+
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div>
+        <div class="navbar-header col-md-4 col-sm-4">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="logo">
+            <a href="index.html">
+            <div id="logo-img"></div>
+            </a>    
+          </div>          
+        </div>
+
+
+        <div class="navbar-collapse collapse col-md-4 col-sm-4">
+          <ul class="nav navbar-nav">
+            <li><a class="menulink" href="index.html">Popular</a></li>
+            <li><a class="menulink" href="artists.html">Artists</a></li>
+            <li><a class="menulink" href="albums.html">Albums</a></li>
+            <li><a class="menulink" href="about.html">About</a></li>
+            <li><a class="menulink fancybox" rel="group" href="#shuffle">Shuffle It!</a></li>
+            <li>
+              <div id="search" class="input-group">
+                <input type="text" class="form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
+                <span class="glyphicon glyphicon-search search-icon"></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="main" class="container col-md-10 col-md-offset-1">
+       <div>
+         <h3>SEARCH RESULTS</h3>
+         <hr>
+       </div>
+
+       <div id="search-results">
+         
+       </div>
+    	
+		<!--section.artist-page>ul.list-unstyled>li.artist-thumb.col-md-2.col-sm-3.col-xs-4*25>img[src="images/artist-1.jpg"].img-responsive+h5{Artist Name $} -->
+
+
+    </div> <!-- /container -->
+
+    <div id="main" class="container">
+      <footer class="container text-center col-md-12">
+        Copyright &copy; 2014 AnthemShuffle
+      </footer>
+    </div>
+
+<script>
+$(function() {
+     $.ajax({
+     url:'http://api.musixmatch.com/ws/1.1/track.search?apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp&q=taylorp',
+     dataType: 'jsonp', 
+     success:function(result){
+        var showSearch = '',
+            search
+            ;
+         
+       for (var i=0; i<result['message']['body']['track_list'].length; i++){ 
+            //alert(i);  
+            search = result['message']['body']['track_list'][i]['track'];
+            showSearch += '<span><h5>'+ search['track_name']+ '</h5></span>'+search['track_id']+'<br>';
+
+            $('#search-results').html(showSearch);
+          }
+
+     },
+     error:function(){
+         alert("Error");
+     },
+    });
+});
+
+</script>
+
+
+
+    
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=738817786149592";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <!-- ===================FB COMMENT BOX==================== -->
+    <!-- Detect data-url from existing page and set data-width -->
+    <script type="text/javascript">
+      var sUrl = window.location;
+      var fbWidth = document.getElementById('fb-container').offsetWidth;
+      var fbSetWidth = fbWidth - 50;
+      console.log(fbWidth);
+      console.log(fbSetWidth);
+      document.getElementById('fb').setAttribute('href', sUrl);
+      document.getElementById('fb').setAttribute('data-width', fbSetWidth);
+    </script>
+
+</body>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });
+</script>
+
+<div style="display: none;" id="shuffle" class="text-center">
+  <h2>SHUFFLE!</h2>
+  <div class="col-md-4"><a href="artist.html">
+      <img src="images/album-1.jpg" alt="">
+      <h4>ARTIST</h4>
+    </a></div>
+  <div class="col-md-4"><a href="album.html">
+      <img src="images/album-1.jpg" alt="">
+      <h4>ALBUM</h4>
+    </a></div>
+  <div class="col-md-4"><a href="lyrics.html">
+      <img src="images/album-1.jpg" alt="">
+      <h4>LYRICS</h4>
+    </a></div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+</html>
