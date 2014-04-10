@@ -97,36 +97,7 @@
 
       <section class="col-md-6" id="lyrics-body">
         <div class="col-md-12 col-sm-8" id="lyrics-contents">
-          <p>
-            Lorem ipsum dolor sit amet, <br>
-            Consectetur adipisicing elit <br>
-            Consequatur <br>
-            Alias, provident 
-          </p>
-          <p>
-            Unde, incidunt blanditiis  <br>
-            dolore molestiae ullam placeat  <br>
-            quod nam ipsam fugit et esse  <br>
-            rem eligendi similique 
-          </p>
-          <p>
-            Fugit, optio, numquam sint  <br>
-            Nam doloribus voluptatum  <br>
-            Commodi tenetur voluptates  <br>
-            Iusto inventore dolore quidem <br>
-          </p>
-          <p>
-            Rerum, molestiae, obcaecati,  <br>
-            veritatis minima ullam maxime  <br>
-            consequatur minus  <br>
-            debitis illo soluta explicabo <br>
-          </p>
-          <p>
-            In, aperiam, fuga,  <br>
-            repellendus,  <br>
-            voluptatibus architecto <br>
-            quas cumque ab sit <br>
-           </p>
+          
         </div>
         <!--div class="col-md-4 col-sm-4"><img src="images/insert-ad-here.png" alt=""></div-->
 
@@ -176,32 +147,41 @@
         Copyright &copy; 2014 AnthemShuffle
       </footer>
     </div>
-    <script>
-    $(function() {
 
-    $.ajax({
-     url:'http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=0d74af2fc514e207179adfcb59b6dac3',
+    <script>
+$(function() {
+     $.ajax({
+     url:'http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp',
      dataType: 'jsonp', 
      success:function(result){
-        
-        var showTrack = '',
-            track
+        //alert("kadfkasdjfa");
+        var showAlbums = '',
+            lyrics
             ;
+            
+        lyrics = result['message']['body']['lyrics'];
+        lyricsbody = convertToHTMLVisibleNewline(lyrics['lyrics_body']);
+        showAlbums += '<span><h5>'+lyricsbody+'</h5></span>';
 
-        for (var i=0;i<result['message']['body']['lyrics_id'].length;i++){ 
+        $('#lyrics-contents').html(showAlbums);
 
-            track = result['message']['body']['lyrics_id'][i]['lyrics_body'];
-            showTrack += '<li class="album-thumb"><a href="#" class="album-link"><h4 class="song-title">'+track['lyrics_id']+'</h4></a><a href="artist.html" class="artist-link"><h5 class="artist-name">by: '+track['lyrics_body']+'</h5></a></li>';
-
-
-          $('#lyrics').html(showLyrics);
-        }
      },
      error:function(){
          alert("Error");
      },
     });
-    </script>
+    
+    function convertToHTMLVisibleNewline(value) {
+        if (value != null && value != "") {
+            return value.replace(/\n/g, "<br/>");
+        } else {
+            return value;
+        }
+    }
+});
+</script>
+
+
     
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
