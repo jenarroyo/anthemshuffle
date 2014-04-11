@@ -50,7 +50,7 @@
             <li><a class="menulink fancybox" rel="group" href="#shuffle">Shuffle It!</a></li>
             <li>
               <div id="search" class="input-group">
-                <input type="text" class="form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
+                <input type="text" class="search form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
                 <span class="glyphicon glyphicon-search search-icon"></span>
               </div>
             </li>
@@ -62,16 +62,13 @@
 
     <div id="main" class="container col-md-10 col-md-offset-1">
        <div>
-         <h3>SEARCH RESULTS</h3>
+         <h2>SEARCH RESULTS</h2>
          <hr>
        </div>
 
-       <div id="search-results">
-         
-       </div>
-    	
-		<!--section.artist-page>ul.list-unstyled>li.artist-thumb.col-md-2.col-sm-3.col-xs-4*25>img[src="images/artist-1.jpg"].img-responsive+h5{Artist Name $} -->
+      <div class="col-md-12" id="search-results"></div>
 
+		<!--section.artist-page>ul.list-unstyled>li.artist-thumb.col-md-2.col-sm-3.col-xs-4*25>img[src="images/artist-1.jpg"].img-responsive+h5{Artist Name $} -->
 
     </div> <!-- /container -->
 
@@ -81,10 +78,32 @@
       </footer>
     </div>
 
+
 <script>
-$(function() {
+ var sURL = window.document.URL.toString();  
+    if (sURL.indexOf("?") > 0)
+    {
+       var arrParams = sURL.split("?");         
+        var sParam =  arrParams[1].split("=");
+        if (sParam[1] != ""){
+            var keyword= sParam[1];
+            search(keyword);
+        }
+        else
+            arrParamValues[i] = "No Value";
+    }
+
+
+$('.search').keydown(function(){
+  var keyword = $('.search').val();
+  //alert(keyword);
+  search(keyword);
+});   
+
+function search(keyword){
+    var url = "http://api.musixmatch.com/ws/1.1/track.search?apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp&q="+keyword;
      $.ajax({
-     url:'http://api.musixmatch.com/ws/1.1/track.search?apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp&q=taylorp',
+     url:url,
      dataType: 'jsonp', 
      success:function(result){
         var showSearch = '',
@@ -94,7 +113,7 @@ $(function() {
        for (var i=0; i<result['message']['body']['track_list'].length; i++){ 
             //alert(i);  
             search = result['message']['body']['track_list'][i]['track'];
-            showSearch += '<span><h5>'+ search['track_name']+ '</h5></span>'+search['track_id']+'<br>';
+            showSearch +='<div class="col-md-12"><div class="col-md-4 col-sm-4"><img src="'+search['album_coverart_350x350']+'" alt="" class="img-responsive"></div><div class="col-md-8 col-sm-8"><br><h5><span> Track Name:</span> '+ search['track_name']+ '<br><span> Artist Name: </span> '+ search['artist_name']+'<br> <span> Album Name:</span> '+search['album_name']+'<br></h5><br><a href="'+search['track_edit_url']+'"><span>Click to view full lyrics</span></a><a href="'+search['track_share_url']+ '"><br><span> Share Music</span> <br></a></div></div><hr class="col-md-12">';
 
             $('#search-results').html(showSearch);
           }
@@ -104,34 +123,11 @@ $(function() {
          alert("Error");
      },
     });
-});
-
+}
 </script>
 
 
 
-    
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=738817786149592";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!-- ===================FB COMMENT BOX==================== -->
-    <!-- Detect data-url from existing page and set data-width -->
-    <script type="text/javascript">
-      var sUrl = window.location;
-      var fbWidth = document.getElementById('fb-container').offsetWidth;
-      var fbSetWidth = fbWidth - 50;
-      console.log(fbWidth);
-      console.log(fbSetWidth);
-      document.getElementById('fb').setAttribute('href', sUrl);
-      document.getElementById('fb').setAttribute('data-width', fbSetWidth);
-    </script>
 
 </body>
 

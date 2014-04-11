@@ -48,8 +48,10 @@
             <li><a class="menulink fancybox" rel="group" href="#shuffle">Shuffle It!</a></li>
             <li>
               <div id="search" class="input-group">
-                <input type="text" class="form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
-                <span class="glyphicon glyphicon-search search-icon"></span>
+                <form action="search.html">
+                <input type="text" name="q" onClick="search.html" class="search form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
+                <input type="submit" class="glyphicon glyphicon-search search-icon"></span>
+                </form>
               </div>
             </li>
           </ul>

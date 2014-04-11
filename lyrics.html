@@ -50,8 +50,10 @@
             <li><a class="menulink fancybox" rel="group" href="#shuffle">Shuffle It!</a></li>
             <li>
               <div id="search" class="input-group">
-                <input type="text" class="form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
-                <span class="glyphicon glyphicon-search search-icon"></span>
+                <form action="search.html">
+                <input type="text" name="q" onClick="search.html" class="search form-control col-md-1" placeholder="SEARCH HERE" id="search-bar">
+                <input type="submit" class="glyphicon glyphicon-search search-icon"></span>
+                </form>
               </div>
             </li>
           </ul>
@@ -149,37 +151,37 @@
     </div>
 
     <script>
-$(function() {
-     $.ajax({
-     url:'http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp',
-     dataType: 'jsonp', 
-     success:function(result){
-        //alert("kadfkasdjfa");
-        var showAlbums = '',
-            lyrics
-            ;
-            
-        lyrics = result['message']['body']['lyrics'];
-        lyricsbody = convertToHTMLVisibleNewline(lyrics['lyrics_body']);
-        showAlbums += '<span><h5>'+lyricsbody+'</h5></span>';
+    $(function() {
+         $.ajax({
+         url:'http://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=15953433&apikey=0d74af2fc514e207179adfcb59b6dac3&format=jsonp',
+         dataType: 'jsonp', 
+         success:function(result){
+            //alert("kadfkasdjfa");
+            var showAlbums = '',
+                lyrics
+                ;
+                
+            lyrics = result['message']['body']['lyrics'];
+            lyricsbody = convertToHTMLVisibleNewline(lyrics['lyrics_body']);
+            showAlbums += '<span><h5>'+lyricsbody+'</h5></span>';
 
-        $('#lyrics-contents').html(showAlbums);
+            $('#lyrics-contents').html(showAlbums);
 
-     },
-     error:function(){
-         alert("Error");
-     },
-    });
-    
-    function convertToHTMLVisibleNewline(value) {
-        if (value != null && value != "") {
-            return value.replace(/\n/g, "<br/>");
-        } else {
-            return value;
+         },
+         error:function(){
+             alert("Error");
+         },
+        });
+        
+        function convertToHTMLVisibleNewline(value) {
+            if (value != null && value != "") {
+                return value.replace(/\n/g, "<br/>");
+            } else {
+                return value;
+            }
         }
-    }
-});
-</script>
+    });
+    </script>
 
 
     
